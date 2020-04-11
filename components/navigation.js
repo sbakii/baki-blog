@@ -5,7 +5,7 @@ function Navigation() {
     return <nav>
 
         <Link href="/">
-            <a className={styles.link}>Anasayfa</a>
+            <a className={styles.link} >Anasayfa</a>
         </Link>
 
         <Link href="/about">
