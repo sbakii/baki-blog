@@ -15,7 +15,7 @@ function Layout({ children }) {
 
         <footer>
 
-            baki.site
+            sb
 
         </footer>
     </div>
