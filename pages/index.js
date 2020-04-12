@@ -1,8 +1,8 @@
 import Layout from '../components/layout'
 import Head from 'next/head'
-
-
-function HomePage() {
+import unfetch from 'isomorphic-unfetch'
+import Link from 'next/link'
+function HomePage({characters}) {
     return(
          <Layout>
 
@@ -10,10 +10,29 @@ function HomePage() {
             <title>Ana Sayfa</title>
         </Head>
 
-        <h1> Web Sayfama Hoş Geldiniz.</h1>
-          
+        <h1> RICK AND MORTY CARACTERS.</h1>
+
+       <ul>
+       {characters.results.map(character => (
+             <li key={character.id}>
+                 <Link href ="/character/[id]" as={'/character/${character.id}'}>
+                 <a> {character.name}  </a>
+                 </Link> </li>))}
+        
+       </ul>
     </Layout>
     )
 }
 
+export async function getStaticProps() {
+    //datafetch
+    const data = await unfetch("https://rickandmortyapi.com/api/character/")
+    const characters = await data.json()
+  
+    return {
+      props: {
+          characters 
+      }, 
+    }
+  }
 export default HomePage

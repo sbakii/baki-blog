@@ -15,8 +15,7 @@ function Layout({ children }) {
 
         <footer>
 
-            sb
-
+      
         </footer>
     </div>
     )
