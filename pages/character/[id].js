@@ -11,7 +11,7 @@ function CharacterDetail({character}) {
             <title>Ana Sayfa</title>
         </Head>
        
-        <div>{hello}</div>
+       
         <div>{character.name}</div>
       
     </Layout>
