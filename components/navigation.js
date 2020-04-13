@@ -7,15 +7,8 @@ function Navigation() {
         <Link href="/">
          <a className={styles.link} >Anasayfa</a>
         </Link>
-
-        <Link href="/about">
-            <a className={styles.link}>Hakkımda</a>
-        </Link>
-
-        <Link href="/contactus">
-            <a className={styles.link}>İletişim</a>
-        </Link>
-
+   
+     
     </nav>
 
 }
